@@ -8,7 +8,7 @@
 
             //Task2();
 
-            Task3();
+            //Task3();
 
             //Task4();
 
@@ -16,7 +16,7 @@
 
             //Task6();
 
-            Task7();
+            //Task7();
         }
 
         static void Task1()
@@ -63,11 +63,6 @@
             // Enter the name of the drink(coffee, tea, juice, water).
             // Print the name and price of the drink.
 
-            Console.Write("Enter the name of the drink(coffee, tea, juice, water) -> ");
-            //string drinkName = Console.ReadLine();
-
-            DrinkName drinkName = new DrinkName();
-
             Drink[] drinks =
                 [
                     new Drink { Name = DrinkName.coffee, Price = 24.50 },
@@ -76,12 +71,16 @@
                     new Drink { Name = DrinkName.water, Price = 2.13 }
                     ];
 
-            //switch (drinkName)
-            //{
-            //    case DrinkName.coffee:
-            //}
+            Console.Write("Enter the name of the drink(coffee, tea, juice, water) -> ");
 
-            //Console.WriteLine(drinks[(DrinkName)drinkName]);
+            if (Enum.TryParse(Console.ReadLine(), true, out DrinkName drinkName))
+            {
+                Console.WriteLine(drinks[(int)drinkName]);
+            }
+            else
+            {
+                Console.WriteLine("Not a drink :(");
+            }
         }
         enum DrinkName { coffee, tea, juice, water }
         struct Drink
@@ -125,6 +124,7 @@
 
             Console.WriteLine($"({result.Remove(result.Length - 1, 1)})/{count} = {(double)sum / count}");
         }
+        
         static void Task5()
         {
             // 5
@@ -154,6 +154,7 @@
                 Console.WriteLine($"{year} - ні");
             }
         }
+        
         static void Task6()
         {
             // 6
@@ -174,6 +175,7 @@
 
             Console.WriteLine($"The sum of digits of the number {numS} -> {sum}");
         }
+        
         static void Task7()
         {
             // 7
