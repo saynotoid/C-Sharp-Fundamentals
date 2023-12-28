@@ -8,8 +8,8 @@ namespace _03_HomeWork
     {
         static void Main(string[] args)
         {
-            HomeWork1();
-            //HomeWork2();
+            //HomeWork1();
+            HomeWork2();
             //HomeWork3();
 
         }
