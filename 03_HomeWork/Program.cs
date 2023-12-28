@@ -26,15 +26,15 @@ namespace _03_HomeWork
 
             for (int i = 0; i < str.Length; i++)
             {
-                Enum.TryParse(str[i].ToString(), true, out characters character);
-                switch (character)
-                {
-                    case characters.a: countA++; break;
-                    case characters.o: countO++; break;
-                    case characters.i: countI++; break;
-                    case characters.e: countE++; break;
-                    default: break;
-                }
+                if (Enum.TryParse(str[i].ToString(), true, out characters character))
+                    switch (character)
+                    {
+                        case characters.a: countA++; break;
+                        case characters.o: countO++; break;
+                        case characters.i: countI++; break;
+                        case characters.e: countE++; break;
+                        default: break;
+                    }
             }
 
             Console.WriteLine($"The counts of characters are:\n" +
