@@ -48,7 +48,7 @@ namespace _03_HomeWork
             // Read value and output the count of days in this month.
 
             Month[] months =
-                [
+                {
                     new Month { Name = Months.January, CountOfDays = 31 },
                     new Month { Name = Months.February, CountOfDays = 28 },
                     new Month { Name = Months.March, CountOfDays = 31 },
@@ -61,7 +61,7 @@ namespace _03_HomeWork
                     new Month { Name = Months.October, CountOfDays = 31 },
                     new Month { Name = Months.November, CountOfDays = 30 },
                     new Month { Name = Months.December, CountOfDays = 31 }
-                ];
+            };
 
             Console.Write("Enter the number of month -> ");
 
