@@ -3,23 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Task", "01_Task\01_Task.csproj", "{0DE01558-9FE0-4C0D-AFE0-41616C719B80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_Task", "01_Task\01_Task.csproj", "{0DE01558-9FE0-4C0D-AFE0-41616C719B80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_HomeWork", "01_HomeWork\01_HomeWork.csproj", "{8CC1AF8E-7564-4F16-B96F-2CD30242FEB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_HomeWork", "01_HomeWork\01_HomeWork.csproj", "{8CC1AF8E-7564-4F16-B96F-2CD30242FEB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_Task", "02_Task\02_Task.csproj", "{32261E6D-37CF-44E4-9EF7-37FC9F44E512}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_Task", "02_Task\02_Task.csproj", "{32261E6D-37CF-44E4-9EF7-37FC9F44E512}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_HomeWork", "02_HomeWork\02_HomeWork.csproj", "{2985F8D6-48A0-497E-BB79-C94FAA7DEBEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_HomeWork", "02_HomeWork\02_HomeWork.csproj", "{2985F8D6-48A0-497E-BB79-C94FAA7DEBEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Task", "03_Task\03_Task.csproj", "{D65F995A-60FF-429E-AEE4-66DF0C68B113}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_Task", "03_Task\03_Task.csproj", "{D65F995A-60FF-429E-AEE4-66DF0C68B113}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_HomeWork", "03_HomeWork\03_HomeWork.csproj", "{349EEE58-2C9B-4750-B2A1-A1BC4A5ADE30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_HomeWork", "03_HomeWork\03_HomeWork.csproj", "{349EEE58-2C9B-4750-B2A1-A1BC4A5ADE30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Task_Advanced", "03_Task_Advanced\03_Task_Advanced.csproj", "{F5617EC3-6B50-417C-B5F8-50C1D90DD811}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_Task_Advanced", "03_Task_Advanced\03_Task_Advanced.csproj", "{F5617EC3-6B50-417C-B5F8-50C1D90DD811}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_Task", "04_Task\04_Task.csproj", "{47B4FDF9-8399-4438-BF8F-42C9B621D986}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04_Task", "04_Task\04_Task.csproj", "{47B4FDF9-8399-4438-BF8F-42C9B621D986}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_HomeWork", "04_HomeWork\04_HomeWork.csproj", "{5FC9D3CB-6A59-4044-BCBE-50A5EFFAF37D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04_HomeWork", "04_HomeWork\04_HomeWork.csproj", "{5FC9D3CB-6A59-4044-BCBE-50A5EFFAF37D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_Task", "05_Task\05_Task.csproj", "{BEE6A226-C8E7-47E8-BB23-F188FE95B623}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{5FC9D3CB-6A59-4044-BCBE-50A5EFFAF37D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FC9D3CB-6A59-4044-BCBE-50A5EFFAF37D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FC9D3CB-6A59-4044-BCBE-50A5EFFAF37D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEE6A226-C8E7-47E8-BB23-F188FE95B623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE6A226-C8E7-47E8-BB23-F188FE95B623}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE6A226-C8E7-47E8-BB23-F188FE95B623}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE6A226-C8E7-47E8-BB23-F188FE95B623}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
