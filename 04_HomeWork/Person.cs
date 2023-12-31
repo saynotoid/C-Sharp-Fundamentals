@@ -64,5 +64,13 @@ namespace _04_HomeWork
         {
             return !(a == b);
         }
+
+        public override bool Equals(object? obj)
+        {
+            if (obj == null)
+                return false;
+
+            return obj is Person anotherPerson ? _name == anotherPerson._name : false;
+        }
     }
 }
