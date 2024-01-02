@@ -72,5 +72,11 @@ namespace _04_HomeWork
 
             return obj is Person anotherPerson ? _name == anotherPerson._name : false;
         }
+
+        public override int GetHashCode()
+        {
+
+            return base.GetHashCode();
+        }
     }
 }
