@@ -44,11 +44,6 @@ namespace _05_HomeWork
             Console.WriteLine("Programmer destroyed");
         }
 
-        public int CompareTo(IDeveloper other)
-        {
-            return this.Tool.CompareTo(other.Tool);
-        }
-
         //-----
 
         public static bool operator ==(Programmer a, Programmer b)

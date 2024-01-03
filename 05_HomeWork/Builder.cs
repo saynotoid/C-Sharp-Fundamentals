@@ -37,11 +37,6 @@ namespace _05_HomeWork
             Console.WriteLine("Builder destroyed");
         }
 
-        public int CompareTo(IDeveloper other)
-        {
-            return this.Tool.CompareTo(other.Tool);
-        }
-
         //-----
         public static bool operator ==(Builder a, Builder b)
         {

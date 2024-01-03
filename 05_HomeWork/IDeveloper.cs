@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace _05_HomeWork
         public void Create() { }
         public void Destroy() { }
 
-        public int CompareTo(IDeveloper other)
+        int IComparable<IDeveloper>.CompareTo(IDeveloper other)
         {
             return this.Tool.CompareTo(other.Tool);
         }
