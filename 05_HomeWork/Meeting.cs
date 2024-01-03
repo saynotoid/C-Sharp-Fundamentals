@@ -8,11 +8,11 @@ namespace _05_HomeWork
 {
     internal class Meeting
     {
-        private Dictionary<uint, string> _people;// = new Dictionary<uint, string>();
+        private Dictionary<uint, string> people;
 
         public void Initialize()
         {
-            _people = new Dictionary<uint, string>();
+            people = new Dictionary<uint, string>();
 
             for (int i = 0; i < 7; i++)
             {
@@ -20,7 +20,7 @@ namespace _05_HomeWork
                 uint.TryParse(Console.ReadLine(), out uint id);
                 Console.WriteLine("Please, enter name");
                 string name = Console.ReadLine();
-                _people.Add(id, name);
+                people.Add(id, name);
             }
         }
 
@@ -29,7 +29,7 @@ namespace _05_HomeWork
             Console.WriteLine("Please, enter Id");
             uint.TryParse(Console.ReadLine(), out uint id);
 
-            if (_people.TryGetValue(id, out string name))
+            if (people.TryGetValue(id, out string name))
             {
                 Console.WriteLine(name);
             }
