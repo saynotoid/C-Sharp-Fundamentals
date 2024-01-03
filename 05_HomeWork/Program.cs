@@ -61,29 +61,10 @@ namespace _05_HomeWork
             //
             //If this ID can't be found - "not found" should be printed.
 
-            Dictionary<uint, string> people = new Dictionary<uint, string>();
+            Meeting meeting = new Meeting();
 
-            for (int i = 0; i < 7; i++)
-            {
-                Console.WriteLine("Please, enter Id");
-                uint.TryParse(Console.ReadLine(), out uint id);
-                Console.WriteLine("Please, enter name");
-                string name = Console.ReadLine();
-                people.Add(id, name);
-            }
-
-            Console.WriteLine("Please, enter Id");
-            uint.TryParse(Console.ReadLine(), out uint id2);
-
-            if (people.TryGetValue(id2, out string name2))
-            {
-                Console.WriteLine(name2);
-            }
-            else
-            {
-                Console.WriteLine("not found");
-            }
-
+            meeting.Initialize();
+            meeting.FindPerson();
         }
     }
 }
