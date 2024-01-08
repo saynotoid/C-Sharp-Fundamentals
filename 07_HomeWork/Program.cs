@@ -116,7 +116,7 @@ namespace _07_HomeWork
                 {
                     foreach (KeyValuePair<string, string> entry in PhoneBook)
                     {
-                        if (Regex.Match(entry.Value, @"80#########", RegexOptions.IgnoreCase).Success)
+                        if (Regex.Match(entry.Value, @"80.........", RegexOptions.IgnoreCase).Success)
                         {
                             PhoneBook[entry.Key] = "+3" + entry.Value;
                         }
