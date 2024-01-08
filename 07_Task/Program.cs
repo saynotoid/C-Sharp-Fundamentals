@@ -3,6 +3,8 @@ using System;
 using System.IO;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Net.WebRequestMethods;
+using System.Data;
+using System.Text;
 
 namespace _07_Task
 {
@@ -107,14 +109,108 @@ namespace _07_Task
             // about all directories and files from disc D on your computer.
             // Catch appropriative exceptions.
 
+            string writePath = 
+                @"O:\!!SoftServe\202312 C#.Net Fundamentals\C-Sharp-Fundamentals\07_Task\DirectoryC.txt";
 
+            string driveName = @"D:\";
+            string dirName = @"D:\\";
 
+            DriveInfo drive = new DriveInfo(driveName);
+
+            bool inMood = false;
+
+            try
+            {
+                if (drive.IsReady)
+                {
+                    //main code
+
+                    inMood = true;
+                    try
+                    {
+                        if (Directory.Exists(dirName))
+                        {
+                            string[] dirs = Directory.GetDirectories(dirName);
+                            string[] files = Directory.GetFiles(dirName);
+
+                            //writing to the file
+
+                            try
+                            {
+                                using (StreamWriter sw = new StreamWriter(writePath))
+                                {
+                                    sw.WriteLine($"Dirs:\n{"name",-25}\t{"creation time",-15}\n");
+                                    foreach (string dir in dirs)
+                                    {
+                                        sw.WriteLine(DirInfoCombiner(new DirectoryInfo(dir)));
+                                    }
+                                    sw.WriteLine($"\n\nFiles:\n{"name",-25}\t{"type",-15}\t{"size",-15}\n");
+                                    foreach (string file in files)
+                                    {
+                                        sw.WriteLine(FileInfoCombiner(new FileInfo(file)));
+                                    }
+                                }
+                            }
+                            catch (FileNotFoundException ex)
+                            {
+                                Console.WriteLine("File not found...........");
+                            }
+                            catch (Exception ex)
+                            {
+                                throw;
+                            }
+                        }
+                        else
+                        {
+                            throw new DirectoryNotFoundException("O M G dir not found");
+                        }
+                    }
+                    catch (DirectoryNotFoundException ex)
+                    {
+                        Console.WriteLine("im in mood tho! but dir is not... T.T");
+                        throw;
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+                }
+                else
+                {
+                    throw new DriveNotFoundException("not ready");
+                }
+            }
+            catch (DriveNotFoundException ex) when (inMood)
+            {
+                Console.WriteLine(ex);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                Console.WriteLine("\nWork is DONE!");
+                Console.ReadKey();
+            }
+        }
+
+        static string DirInfoCombiner(DirectoryInfo dir)
+        {
+            return String.Format($"{(dir.Name.Length > 20 ? dir.Name.Remove(20) : dir.Name),-25}" +
+                $"\t{dir.CreationTime,-15}");
+        }
+        static string FileInfoCombiner(FileInfo file)
+        {
+            return String.Format($"{(file.Name.Length > 20 ? file.Name.Remove(20) : file.Name),-25}" +
+                $"\t{file.Extension,-15}\t{file.Length,-15}");
         }
 
         static void Task3()
         {
             // Select from directory D only.txt files and print the text from it into console.
             // Catch appropriative exceptions.
+
 
         }
     }

@@ -1,0 +1,29 @@
+Dirs:
+name                     	creation time  
+
+!!!PASS                  	18.04.2023 12:24:46
+!MY WHOLE LIFE BACKU     	09.09.2023 23:34:54
+$RECYCLE.BIN             	16.06.2020 18:05:18
+Bot                      	25.03.2022 21:49:53
+Recovery                 	25.02.2022 19:42:00
+SteamSSD                 	16.10.2020 21:35:33
+System Volume Inform     	16.06.2020 18:03:49
+Valorant Insights        	12.12.2022 22:48:46
+
+
+Files:
+name                     	type           	size           
+
+1682543743837.jpeg       	.jpeg          	1128173        
+20220101_121141.jpg      	.jpg           	3882224        
+aspnetcore-runtime-6     	.exe           	8931896        
+audio_2023-04-29_12-     	.mp3           	138525         
+BlueStacksInstaller_     	.exe           	1014880        
+ChromeSetup.exe          	.exe           	1295576        
+desktop.ini              	.ini           	0              
+Firefox Installer.ex     	.exe           	334176         
+GenshinImpact_instal     	.exe           	142394632      
+Git-2.35.1.2-64-bit.     	.exe           	50244992       
+id1.jpg                  	.jpg           	3027058        
+id2.jpg                  	.jpg           	3267182        
+nvidia win10.txt         	.txt           	482            
