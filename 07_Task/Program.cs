@@ -211,7 +211,54 @@ namespace _07_Task
             // Select from directory D only.txt files and print the text from it into console.
             // Catch appropriative exceptions.
 
+            string dirName = @"D:\\";
 
+            DirectoryInfo dir = new DirectoryInfo(dirName);
+
+            try
+            {
+                if (dir.Exists)
+                {
+                    //code
+
+                    FileInfo[] files = dir.GetFiles("*.txt");
+
+                    if (files.Length == 0)
+                    {
+                        throw new FileNotFoundException($"no .txt files found in the directory {dir.FullName}");
+                    }
+                    else
+                    {
+                        //code
+
+                        foreach (FileInfo file in files)
+                        {
+                            Console.WriteLine($"\n{file.FullName} content below\n");
+                            using (StreamReader sr = new StreamReader(file.FullName))
+                            {
+                                Console.WriteLine(sr.ReadToEnd());
+                            }
+                            Console.WriteLine();
+                        }
+                    }
+                }
+                else
+                {
+                    throw new DirectoryNotFoundException("dir not found :-(");
+                }
+            }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine(ex);
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.WriteLine(ex);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
     }
 }
