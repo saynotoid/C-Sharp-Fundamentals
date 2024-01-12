@@ -26,3 +26,4 @@ GenshinImpact_instal     	.exe           	142394632
 Git-2.35.1.2-64-bit.     	.exe           	50244992       
 id1.jpg                  	.jpg           	3027058        
 id2.jpg                  	.jpg           	3267182        
+nvidia win10.txt         	.txt           	482            
