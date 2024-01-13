@@ -31,8 +31,8 @@ namespace _08_Task
 
             List<Person> people = new List<Person>()
             {
-                new Staff("staff1", 100),
-                new Teacher("teacher1",150,"subject1"),
+                new Staff("staff1", 2100),
+                new Teacher("teacher1",2150,"subject1"),
                 new Developer("developer1",2000,2)
             };
 
@@ -41,7 +41,50 @@ namespace _08_Task
                 person.Print();
             }
 
+            Console.WriteLine("Enter the person's name.");
+            string name = Console.ReadLine();
 
+            foreach (Person person in people)
+            {
+                if (person.Name == name)
+                {
+                    person.Print();
+                }
+            }
+
+            people.Sort();
+
+            string writePath = @"O:\!!SoftServe\202312 C#.Net Fundamentals\C-Sharp-Fundamentals\08_Task\people.txt";
+
+            using (StreamWriter sr = new StreamWriter(writePath))
+            {
+                foreach (Person person in people)
+                {
+                    sr.WriteLine(person);
+                }
+            }
+
+            List<Person> employees = new List<Person>();
+
+            foreach (Person person in people) 
+            {
+                if (person is Teacher || person is Developer)
+                {
+                    employees.Add(person);
+                }
+            }
+
+            employees.Sort(CompareBySalary);
+
+            foreach (Person person in employees)
+            {
+                person.Print();
+            }
+        }
+
+        public static int CompareBySalary(Person person1, Person person2)
+        {
+            return (person1 as Staff).Salary.CompareTo((person2 as Staff).Salary);
         }
     }
 }

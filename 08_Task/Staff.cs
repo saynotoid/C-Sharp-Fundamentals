@@ -24,5 +24,10 @@ namespace _08_Task
         {
             Console.WriteLine("Person {0} has salary: ${1}", Name, this.salary);
         }
+
+        public override string ToString()
+        {
+            return String.Format("Person {0} has salary: ${1}", Name, this.salary);
+        }
     }
 }

@@ -25,5 +25,11 @@ namespace _08_Task
             Console.WriteLine("Person {0} has salary: ${1} and is of {2} level",
                 Name, this.Salary, this.level);
         }
+
+        public sealed override string ToString()
+        {
+            return String.Format("Person {0} has salary: ${1} and is of {2} level",
+                Name, this.Salary, this.level);
+        }
     }
 }

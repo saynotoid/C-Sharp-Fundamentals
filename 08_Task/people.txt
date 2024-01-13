@@ -1,0 +1,3 @@
+Person developer1 has salary: $2000 and is of 2 level
+Person staff1 has salary: $2100
+Person teacher1 has salary: $2150 and is teaching subject1
