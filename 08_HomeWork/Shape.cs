@@ -27,6 +27,6 @@ namespace _08_HomeWork
 
         public abstract double Perimeter();
         
-        public abstract int CompareTo(Shape other);
+        public abstract int CompareTo(Shape? other);
     }
 }
