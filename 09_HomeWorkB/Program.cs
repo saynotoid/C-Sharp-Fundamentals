@@ -23,6 +23,7 @@ namespace _09_HomeWorkB
             // 2) Find the longest and the shortest line.
             // 3) Find and write only lines, which consist of word "var"
 
+            /*
             List<string> strings = new List<string>();
 
             using (StreamReader sr = new StreamReader("Program.cs"))
@@ -54,6 +55,17 @@ namespace _09_HomeWorkB
             {
                 Console.WriteLine(s);
             }
+            */
+
+            //foreach (int l in FileAnalyzer.GetSumbolsCountInEachLine())
+            //    Console.WriteLine(l);
+
+            //Console.WriteLine(FileAnalyzer.GetLongestLine());
+
+            //Console.WriteLine(FileAnalyzer.GetShortestLine());
+
+            foreach (string s in FileAnalyzer.GetLinesWithLet())
+                Console.WriteLine(s);
         }
     }
 }
