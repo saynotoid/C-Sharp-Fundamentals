@@ -15,18 +15,19 @@ namespace _09_HomeWorkA
             this.name = name;
         }
 
-        public string Name
+        public string Name { get { return name; } }
+
+        public int CompareTo(Shape other)
         {
-            get { return name; }
-            set
-            {
-            }
+            return Area().CompareTo(other.Area());
         }
 
         public abstract double Area();
-
         public abstract double Perimeter();
-        
-        public abstract int CompareTo(Shape? other);
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

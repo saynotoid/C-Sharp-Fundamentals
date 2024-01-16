@@ -37,9 +37,9 @@ namespace _09_HomeWorkA
             */
             using (StreamWriter sw = new StreamWriter(@"shapes with area from range[10, 100].txt"))
             {
-                foreach (var item in shapes.Where(shape => 10 <= shape.Area() && shape.Area() <= 100))
+                foreach (Shape shape in shapes.Where(shape => 10 <= shape.Area() && shape.Area() <= 100))
                 {
-                    sw.WriteLine(InfoClass.Info(item));
+                    sw.WriteLine(InfoClass.Info(shape));
                 }
             }
 
@@ -50,13 +50,13 @@ namespace _09_HomeWorkA
             */
             using (StreamWriter sw = new StreamWriter(@"shapes which name contains letter 'a'.txt"))
             {
-                foreach (var item in shapes.Where(shape => shape.Name.Contains('a') == true))
+                foreach (Shape shape in shapes.Where(shape => shape.Name.Contains('a') == true))
                 {
-                    sw.WriteLine(InfoClass.Info(item));
+                    sw.WriteLine(InfoClass.Info(shape));
                 }
             }
 
-            shapes = shapes.Where(shape => 5 <= shape.Perimeter()).ToList();
+            //shapes = shapes.Where(shape => 5 <= shape.Perimeter()).ToList();
 
             /*
             shapes = (from shape in shapes
@@ -67,14 +67,24 @@ namespace _09_HomeWorkA
             //shapes.Remove((shape => 5 <= shape.Perimeter());
 
 
-            Console.WriteLine("list:");
+            //Console.WriteLine("list:");
 
-            foreach (Shape shape in shapes)
-            {
-                Console.WriteLine(InfoClass.Info(shape));
-            }
+            //foreach (Shape shape in shapes.Where(shape => 5 <= shape.Perimeter()).ToList())
+            //{
+            //    Console.WriteLine(InfoClass.Info(shape));
+            //}
+
+            Operator myOperator = new Operator();
+            myOperator.AddShape(new Circle("circle round", 11));
+            myOperator.AddShape(new Circle("c2", 3));
+            myOperator.AddShape(new Circle("c3", 2));
+            myOperator.AddShape(new Circle("large circle", 8));
+            myOperator.AddShape(new Square("square equal sided", 1));
+            myOperator.AddShape(new Square("square large", 12));
+            myOperator.RemoveWithPerimeterLessThan5();
+            Console.WriteLine();
+            myOperator.Sort();//check if shapes are actually removed
         }
-
     }
 
     internal static class InfoClass

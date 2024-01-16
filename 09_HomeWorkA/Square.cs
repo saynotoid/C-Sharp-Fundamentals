@@ -10,32 +10,20 @@ namespace _09_HomeWorkA
 {
     internal class Square : Shape
     {
-        private double side;
-
-        public double Side
-        {
-            get { return side; }
-            set { side = value; }
-        }
+        public double Side { get; set; }
 
         public Square(string name, double side) : base(name)
         {
-            this.side = side;
+            Side = side;
         }
 
         public override double Area()
         {
-            return side * side;
+            return Side * Side;
         }
-
         public override double Perimeter()
         {
-            return side * 4;
-        }
-
-        public override int CompareTo(Shape other)
-        {
-            return this.Area().CompareTo(other.Area());
+            return 4 * Side;
         }
     }
 }

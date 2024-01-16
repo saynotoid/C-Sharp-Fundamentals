@@ -10,22 +10,25 @@
   <Class Name="_09_HomeWorkA.Shape">
     <Position X="2" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAAQAAAAAAAQAAAAEAAAAAAAAAQAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAAAAQEAAAAAAQAAAAEAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Shape.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="_09_HomeWorkA.Circle">
     <Position X="2" Y="4" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAIAAAACQAAAAQAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <HashCode>AAAIAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Circle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_09_HomeWorkA.Square">
     <Position X="4" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAgAQAAIAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAAgAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Square.cs</FileName>
     </TypeIdentifier>
   </Class>

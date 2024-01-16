@@ -8,32 +8,21 @@ namespace _09_HomeWorkA
 {
     internal class Circle : Shape
     {
-        private double radius;
-
-        public double Radius
-        {
-            get { return radius; }
-            set { radius = value; }
-        }
+        public const double pi = 3.14;
+        public double Radius { get; set; }
 
         public Circle(string name, double radius) : base(name)
         {
-            this.radius = radius;
+            Radius = radius;
         }
 
         public override double Area()
         {
-            return Math.PI * radius * radius;
+            return pi * Radius * Radius;
         }
-
         public override double Perimeter()
         {
-            return Math.PI * 2 * radius;
-        }
-
-        public override int CompareTo(Shape other)
-        {
-            return this.Area().CompareTo(other.Area());
+            return 2 * pi * Radius;
         }
     }
 }
