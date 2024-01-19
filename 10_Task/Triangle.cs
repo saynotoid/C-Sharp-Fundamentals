@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _10_Task
 {
-    internal class Triangle
+    public class Triangle
     {
         private Point vertex1;
         private Point vertex2;
