@@ -14,7 +14,14 @@ namespace _11_Task
 
         public void PayingFellowship(int m)
         {
-            Console.WriteLine();
+            if (3<m)
+            {
+                Console.WriteLine($"have scholarship");
+            }
+            else
+            {
+                Console.WriteLine($"don't have scholarship");
+            }
         }
     }
 }

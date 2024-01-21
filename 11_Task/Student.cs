@@ -20,6 +20,7 @@ namespace _11_Task
         public void AddMark(int mark)
         {
             _marks.Add(mark);
+            MarkChange((int)_marks.Average());
         }
     }
 }

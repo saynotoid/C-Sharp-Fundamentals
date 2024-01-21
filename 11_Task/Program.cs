@@ -27,16 +27,16 @@
 
             student.MarkChange += parent.OnMarkChange;
 
+            Accountancy accountancy = new Accountancy();
+
+            student.MarkChange += accountancy.PayingFellowship;
+
             student.AddMark(4);
             student.AddMark(2);
             student.AddMark(5);
             student.AddMark(5);
             student.AddMark(3);
             student.AddMark(4);
-
-            Accountancy accountancy = new Accountancy();
-
-            student.MarkChange += accountancy.PayingFellowship;
         }
 
         public delegate void MyDel(int m);
