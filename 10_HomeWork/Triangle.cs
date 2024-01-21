@@ -35,23 +35,23 @@ namespace _10_HomeWork
 
         public double Perimeter()
         {
-            return vertex1.DistanceTo(vertex2) + vertex1.DistanceTo(Vertex3) + vertex2.DistanceTo(vertex3);
+            return vertex1.DistanceTo(vertex2) + vertex2.DistanceTo(vertex3) + vertex3.DistanceTo(Vertex1);
         }
 
         public double Area()
         {
             // формула Герона
-            double sideA = vertex1.DistanceTo(vertex2);
-            double sideB = vertex1.DistanceTo(Vertex3);
-            double sideC = vertex2.DistanceTo(vertex3);
-
             double perimeterHalved = Perimeter() / 2;
+
+            double deltaA = perimeterHalved - vertex1.DistanceTo(vertex2);
+            double deltaB = perimeterHalved - vertex2.DistanceTo(Vertex3);
+            double deltaC = perimeterHalved - vertex3.DistanceTo(vertex1);
 
             double area = Math.Sqrt(
                 perimeterHalved
-                * (perimeterHalved - sideA) 
-                * (perimeterHalved - sideB) 
-                * (perimeterHalved - sideC));
+                * deltaA
+                * deltaB
+                * deltaC);
 
             return area;
         }
