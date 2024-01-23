@@ -43,15 +43,11 @@ namespace _10_HomeWork
             // формула Герона
             double perimeterHalved = Perimeter() / 2;
 
-            double deltaA = perimeterHalved - vertex1.DistanceTo(vertex2);
-            double deltaB = perimeterHalved - vertex2.DistanceTo(Vertex3);
-            double deltaC = perimeterHalved - vertex3.DistanceTo(vertex1);
-
             double area = Math.Sqrt(
                 perimeterHalved
-                * deltaA
-                * deltaB
-                * deltaC);
+                * (perimeterHalved - vertex1.DistanceTo(vertex2))
+                * (perimeterHalved - vertex2.DistanceTo(Vertex3))
+                * (perimeterHalved - vertex3.DistanceTo(vertex1)));
 
             return area;
         }
