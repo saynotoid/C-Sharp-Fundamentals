@@ -43,13 +43,11 @@ namespace _10_HomeWork
             // формула Герона
             double perimeterHalved = Perimeter() / 2;
 
-            double area = Math.Sqrt(
+            return Math.Sqrt(
                 perimeterHalved
                 * (perimeterHalved - vertex1.DistanceTo(vertex2))
                 * (perimeterHalved - vertex2.DistanceTo(Vertex3))
                 * (perimeterHalved - vertex3.DistanceTo(vertex1)));
-
-            return area;
         }
 
         public Point ClosestVertexToOrigin()
