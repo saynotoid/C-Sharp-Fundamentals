@@ -59,6 +59,8 @@ namespace _13_Task
 
             using (StreamReader sr = new(stream, leaveOpen: true))
             {
+                //.EndOfStream(
+                sr.DiscardBufferedData();
                 string input = sr.ReadLine();
                 Citrus c = Deserialize(input);
                 Name = c.Name;
