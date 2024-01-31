@@ -21,20 +21,9 @@
 
             List<Triangle> triangles = new List<Triangle>();
 
-            triangles.Add(new Triangle(
-                new Point() { X = 0, Y = 0 },
-                new Point() { X = 1, Y = 0 },
-                new Point() { X = 0, Y = 1 }));
-
-            triangles.Add(new Triangle(
-                new Point() { X = 0, Y = 0 },
-                new Point() { X = 2, Y = 0 },
-                new Point() { X = 1, Y = 2 }));
-
-            triangles.Add(new Triangle(
-                new Point() { X = 1, Y = 1 },
-                new Point() { X = 4, Y = 1 },
-                new Point() { X = 1, Y = 3 }));
+            triangles.Add(new Triangle(new Point(0, 0), new Point(1, 0), new Point(0, 1)));
+            triangles.Add(new Triangle(new Point(0, 0), new Point(2, 0), new Point(1, 2)));
+            triangles.Add(new Triangle(new Point(1, 1), new Point(4, 1), new Point(1, 3)));
 
             foreach (Triangle triangle in triangles)
             {

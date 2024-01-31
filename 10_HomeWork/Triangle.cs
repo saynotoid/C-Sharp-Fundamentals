@@ -25,10 +25,7 @@ namespace _10_HomeWork
         }
 
         public Triangle()
-            : this(
-                  new Point() { X = 0, Y = 0 },
-                  new Point() { X = 0, Y = 0 },
-                  new Point() { X = 0, Y = 0 })
+            : this(new Point(0, 0), new Point(0, 0), new Point(0, 0))
         {
 
         }
